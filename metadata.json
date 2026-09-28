@@ -1,0 +1,6 @@
+{
+  "name": "Bharat Culture Atlas",
+  "description": "India's largest community-powered digital repository for oral traditions, folk songs, indigenous knowledge, and cultural practices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

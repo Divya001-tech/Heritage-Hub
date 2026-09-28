@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-primary: #C85A17;
+    --color-secondary: #1E3A8A;
+    --color-accent: #2E6F40;
+    --color-canvas: #FAF7F0;
+    --color-canvas-subtle: #F2EDE2;
+    --color-ink: #181512;
+    --color-ink-muted: #5C554D;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAF7F0;
+    color: #181512;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    letter-spacing: -0.011em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark body,
+  .dark body {
+    background-color: #12100E;
+    color: #F6F3ED;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+}
+
+.font-monumental {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Subtle Archival Paper Texture */
+.archival-grain {
+  background-image: radial-gradient(rgba(196, 90, 36, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Leaflet Container & Cartography Styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f1ebd9;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  z-index: 10;
+}
+
+/* Antique sepia map tone for authentic cultural atlas feel */
+.antique-map-filter .leaflet-tile-pane {
+  filter: sepia(0.28) saturate(0.85) contrast(1.02) brightness(0.98);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -12px rgba(24, 21, 18, 0.18);
+  border: 1px solid rgba(196, 90, 36, 0.2);
+  background: #ffffff;
+  padding: 2px;
+}
+
+.leaflet-popup-content {
+  margin: 12px;
+  line-height: 1.5;
+}
+
+/* Card hover dynamics: translateY(-6px), editorial shadow */
+.editorial-card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.editorial-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(24, 21, 18, 0.12);
+}
+
+/* Cultural Hotspot Map Seal Animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+.hotspot-pulse {
+  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFD7C7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C85A17;
+}
+
+
